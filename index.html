@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checklist de Viaje - Rifvans</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    img {
+      max-width: 120px;
+      margin: 20px auto;
+    }
+    h1 {
+      color: #204d86;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .checklist {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    button {
+      margin: 15px 5px;
+      padding: 10px 20px;
+      border: none;
+      background: #204d86;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #173c68;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="rifvans-simbolo.png" alt="Logo Rifvans" />
+  <h1>Checklist de Viaje</h1>
+
+  <div class="checklist">
+    <label><input type="checkbox"> Documento de identidad</label>
+    <label><input type="checkbox"> Equipaje listo</label>
+    <label><input type="checkbox"> Pasajes confirmados</label>
+    <label><input type="checkbox"> Snacks y agua</label>
+    <label><input type="checkbox"> Cargador del celular</label>
+    <label><input type="checkbox"> Hora coordinada con conductor</label>
+  </div>
+
+  <div>
+    <button onclick="resetChecklist()">Reiniciar</button>
+    <button onclick="location.href='https://wa.me/message/2ZRAS4YQDM6PC1'">Escribir por WhatsApp</button>
+  </div>
+
+  <script>
+    function resetChecklist() {
+      document.querySelectorAll('input[type=checkbox]').forEach(cb => cb.checked = false);
+    }
+  </script>
+
+</body>
+</html>
